@@ -11,6 +11,12 @@ import './style.css'
 
 function Sidebar() {
   const [{ playlists }, dispatch] = useStateProviderValue()
+  const setPlaylistId = (id) => {
+    dispatch({
+      type: "SET_PLAYLIST_ID",
+      id: id,
+    })
+  }
 
   return (
     <div className="sidebar">
@@ -26,7 +32,7 @@ function Sidebar() {
       <strong className="sidebar__title">PLAYLIST</strong>
       <hr />
       {playlists?.items?.map((playlist, id) => (
-        <div key={id}><SideBarOption title={playlist.name} /> </div>
+        <div key={id}><SideBarOption title={playlist.name} id={playlist.id} setPlaylistId={setPlaylistId} /> </div>
       ))}
 
     </div>

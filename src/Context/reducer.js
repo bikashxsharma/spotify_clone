@@ -1,3 +1,4 @@
+import { DISCOVER_WEEKLY_ID } from '../util/config'
 export const initialState = {
   user: null,
   // change token to null after development //TODO
@@ -10,10 +11,11 @@ export const initialState = {
   discover_weekly: null,
   top_artists: null,
   playing: false,
+  playlist_id: DISCOVER_WEEKLY_ID,
 }
 
 const reducer = (state = initialState, action) => {
-  console.log(action)
+
   switch (action.type) {
     case 'SET_USER':
       return {
@@ -63,8 +65,11 @@ const reducer = (state = initialState, action) => {
         item: action.item,
       }
 
-
-
+    case "SET_PLAYLIST_ID":
+      return {
+        ...state,
+        playlist_id: action.id,
+      }
     default:
       return state
 

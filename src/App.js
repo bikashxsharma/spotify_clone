@@ -11,7 +11,7 @@ import './App.css';
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [{ token }, dispatch] = useStateProviderValue();
+  const [{ token, playlist_id }, dispatch] = useStateProviderValue();
   useEffect(() => {
     const hash = getTokenFromResponse();
     window.location.hash = "";
@@ -24,7 +24,7 @@ function App() {
         token: _token,
       })
 
-      spotify.getPlaylist(DISCOVER_WEEKLY_ID).then((response) =>
+      spotify.getPlaylist(playlist_id).then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,

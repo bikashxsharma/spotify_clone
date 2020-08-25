@@ -10,14 +10,13 @@ import Header from '../Header'
 import SongRow from '../SongRow'
 
 import './style.css'
-
 function Body({ spotify }) {
 
-  const [{ discover_weekly, playing }, dispatch] = useStateProviderValue();
+  const [{ discover_weekly, playing, playlist_id }, dispatch] = useStateProviderValue();
   const playPlaylist = () => {
     spotify
       .play({
-        context_uri: `spotify:playlist:${DISCOVER_WEEKLY_ID}`,
+        context_uri: `spotify:playlist:${playlist_id}`,
       })
       .then((res) => {
         spotify.getMyCurrentPlayingTrack().then((r) => {
