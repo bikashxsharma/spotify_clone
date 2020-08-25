@@ -1,6 +1,6 @@
 import { CLIENT_ID } from './config'
 export const authEndpoint = "https://accounts.spotify.com/authorize"
-const redirectUri = "http://localhost:3000/"
+const redirectUri = "https://spot-clone.netlify.app/"
 
 const scopes = [
   "user-read-currently-playing",
