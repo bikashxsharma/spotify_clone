@@ -1,0 +1,35 @@
+.header{
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+  padding-left:20px;
+  padding-right:10px;
+}
+
+.header__right{
+  display:flex;
+  align-items: center;
+}
+.header__right>h4{
+  margin-left: 10px;
+}
+.header__left{
+  display:flex;
+  flex:0.5;
+  min-width: 70px;
+  align-items: center;
+  background-color: white;
+  color:gray;
+  padding:10px;
+  border-radius: 30px;
+  margin-right:10px;
+}
+.header__left>input{
+  border:none;
+  width: 100%;
+}
+.header__left>input::selection{
+  border:none;
+  width: 100%;
+}

@@ -1,0 +1,3 @@
+export const CLIENT_ID = '5f602087e7b9465ab5855c50ec9284d4'
+
+export const DISCOVER_WEEKLY_ID = "37i9dQZEVXcRczn04d3cYL"
