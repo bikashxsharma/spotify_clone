@@ -1,7 +1,7 @@
 ## Spotify Clone 
 This is a Spotify clone version. Inspired by cleverprogrammer's clone project. 
-#### Live link 
-Note: Due to the limitation of Spotify's API you need to have the Spotify Premium account to run this. Also, it may not show you discover weekly correctly.  
+#### Live link https://spot-clone.netlify.app/
+Note: Due to the limitation of Spotify's API you need to have the Spotify Premium account to run this. Also it requires active device with premium account.
 #### Features
 + Sidebar with real playlist fetched from user's Spotify.
 + Play or pause the "Discover Weekly" playlist. 
